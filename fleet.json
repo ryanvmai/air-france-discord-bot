@@ -1,0 +1,146 @@
+{
+    "IF-DTPK": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-XHUC": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-AFLG": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-YLHG": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-ASAA": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-SYKX": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-BARM": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-OREL": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-CQRC": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-OHUJ": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-DOTQ": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-WGUW": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-VCLO": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+    "IF-VLVF": {
+      "aircraft": "A350-900",
+      "status": "available"
+    },
+  
+    "IF-PMSK": {
+      "aircraft": "A330-200",
+      "status": "available"
+    },
+    "IF-MOBM": {
+      "aircraft": "A330-200",
+      "status": "available"
+    },
+  
+    "IF-REDI": {
+      "aircraft": "A220-300",
+      "status": "available"
+    },
+    "IF-ZLNM": {
+      "aircraft": "A220-300",
+      "status": "available"
+    },
+    "IF-NHRZ": {
+      "aircraft": "A220-300",
+      "status": "available"
+    },
+    "IF-IPTRY": {
+      "aircraft": "A220-300",
+      "status": "available"
+    },
+    "IF-YDEW": {
+      "aircraft": "A220-300",
+      "status": "available"
+    },
+  
+    "IF-PTUC": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-OBPX": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-TGPM": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-PGBJ": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-XACH": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-LQWO": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-FZHH": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-FIUU": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-NFAR": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-SGMF": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-BCCE": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-DWGV": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+    "IF-LCTQ": {
+      "aircraft": "777-300ER",
+      "status": "available"
+    },
+  
+    "IF-QIBV": {
+      "aircraft": "777-200ER",
+      "status": "available"
+    }
+  }
