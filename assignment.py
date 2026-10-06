@@ -1,8 +1,12 @@
+import os
 import discord
 from discord import app_commands
 from discord.ext import commands
+from dotenv import load_dotenv
 
-TOKEN = "c187f1130105ba3bd2dbb73e08c03e46bab5706b3d2260b06a7db313bb4b8ba0"
+# Load the Discord token from .env
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 
@@ -11,8 +15,13 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
-    await bot.tree.sync()
-    print(f"Logged in as {bot.user}")
+    print(f"✅ Logged in as {bot.user}")
+
+    try:
+        synced = await bot.tree.sync()
+        print(f"✅ Synced {len(synced)} slash command(s)")
+    except Exception as e:
+        print(f"❌ Error syncing commands: {e}")
 
 
 @bot.tree.command(
@@ -20,12 +29,12 @@ async def on_ready():
     description="Assign an Air France aircraft to a pilot"
 )
 @app_commands.describe(
-    pilot="Pilot receiving the aircraft",
+    pilot="The Discord user receiving the aircraft",
     infinite_flight_username="Pilot's Infinite Flight username",
-    aircraft_model="Aircraft type, e.g. A359",
-    registration="Aircraft registration",
-    origin="Departure airport ICAO code",
-    destination="Arrival airport ICAO code",
+    aircraft_model="Aircraft model, e.g. A359",
+    registration="Aircraft registration, e.g. F-HTYA",
+    origin="Departure airport ICAO code, e.g. LFPG",
+    destination="Arrival airport ICAO code, e.g. KJFK",
     trip_type="Round Trip or One Way"
 )
 @app_commands.choices(
@@ -44,12 +53,13 @@ async def assignaircraft(
     destination: str,
     trip_type: app_commands.Choice[str]
 ):
-
+    # Clean up formatting
     origin = origin.upper()
     destination = destination.upper()
     aircraft_model = aircraft_model.upper()
     registration = registration.upper()
 
+    # Build route
     if trip_type.value == "round":
         flights = (
             f"**{origin} → {destination}**\n"
@@ -76,5 +86,8 @@ Thank you for flying with **Air France Company**.
 
     await interaction.response.send_message(message)
 
+
+if not TOKEN:
+    raise ValueError("DISCORD_TOKEN was not found in your .env file.")
 
 bot.run(TOKEN)
